@@ -27,7 +27,7 @@ main {
     text-align: center;
     color: white;
     box-shadow: 0 20px 60px rgba(0,0,0,0.65);
-    border: 1px solid rgba(225, 6, 0, 0.35); /* Ferrari red accent */
+    border: 1px solid rgba(225, 6, 0, 0.35);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
     position: relative;
@@ -35,7 +35,7 @@ main {
 }
 
 .logo {
-    margin-top: -40px; /* lift more */
+    margin-top: -40px;
     filter: drop-shadow(0 6px 14px rgba(225,6,0,0.35));
 }
 
@@ -83,7 +83,7 @@ input[type=submit]{
     font-size: 15px;
     border: 1px solid rgba(225,6,0,0.8);
     color: #fff;
-    background-color: #e10600; /* Ferrari red */
+    background-color: #e10600;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
     transition: background-color .15s ease, transform .05s ease;
@@ -104,4 +104,21 @@ input[type=submit]:active { transform: translateY(1px); }
 main {
     position: relative;
     z-index: 1;
+}
+.loader {
+    margin: 10px;
+    width: 60px;
+    aspect-ratio: 4;
+    background: no-repeat radial-gradient(circle, closest-side,#383838 90%, #0000) 0 50%,
+     no-repeat radial-gradient(circle, closest-side,#383838 90%, #0000) 50% 50%,
+     no-repeat radial-gradient(circle, closest-side,#383838 90%, #0000) 100% 50%;
+
+     background-size: cals(100%/3) 100%;
+     animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+    33%{background-size: cals(100%/3) 0,cals(100%/3) 100%,cals(100%/3) 100%;}
+    50%{background-size: cals(100%/3) 100%,cals(100%/3) 0%,cals(100%/3) 100%;}
+    66%{background-size: cals(100%/3) 100%,cals(100%/3) 100%,cals(100%/3) 0;}
 }

@@ -5,14 +5,17 @@ import Image from "next/image"
 import F1GPTLogo from "./assets/logo-no-bg.png"
 import {useChat} from "@ai-sdk/react"
 import type {UIMessage} from "@ai-sdk/react"
+import Bubble from "./components/Bubble"
+import LoadingBubble from "./components/LoadingBubble"
+import PromptSuggestionRow from "./components/PromptSuggestionRow"
+import {Message} from "ai"
+
 
 const Home = () => {
 
     const {append,isLoading,messages,input,handleInputChange,handleSubmit} = useChat()
 
     const noMessages = false
-
-
     
     return (
         <main>
@@ -22,19 +25,18 @@ const Home = () => {
                     <>
                     <p className="starter-text">The best place for Formula 1 fans!</p>
                     <br/>
-                    {/*Prompt suggestions*/}
+                    <PromptSuggestionRow/>
                     </>
                 ) : (
                     <>
-                       {/*Map messages onto text bubbles*/}
-                       {/*<LoadingBubble/>*/}
+                     <LoadingBubble/>  
                     </>
                 )}
                 
             </section>
             <form onSubmit={handleSubmit}>
                     <input className="question-box" onChange={handleInputChange} value={input} placeholder="Ask me anything..."/>
-                    <input type="submit"/>
+                    <input type="submit" value="Send"/>
             </form>
         </main>
 
