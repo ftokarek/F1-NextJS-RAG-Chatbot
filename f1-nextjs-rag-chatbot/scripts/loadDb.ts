@@ -5,3 +5,4 @@ import OpenAI from "openai"
 import "dotenv/config"
 
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter"
+
