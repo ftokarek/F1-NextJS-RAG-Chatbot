@@ -8,12 +8,12 @@ import type {UIMessage} from "@ai-sdk/react"
 import Bubble from "./components/Bubble"
 import LoadingBubble from "./components/LoadingBubble"
 import PromptSuggestionRow from "./components/PromptSuggestionRow"
-import {Message} from "ai"
+ 
 
 
 const Home = () => {
 
-    const {append,isLoading,messages,input,handleInputChange,handleSubmit} = useChat()
+    const {isLoading,messages,input,handleInputChange,handleSubmit} = useChat()
 
     const noMessages = false
     
