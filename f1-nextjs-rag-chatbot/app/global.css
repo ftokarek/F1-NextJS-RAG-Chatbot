@@ -105,6 +105,44 @@ main {
     position: relative;
     z-index: 1;
 }
+
+.bubble {
+    margin: 8px;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    box-shadow: #959da533 0 8px 24px;
+    width: 80%;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+.bubble.user {
+    border-radius:20px 20px 0 20px;
+    background-color: #e10600;
+    margin-left:auto;
+    color: #fff;
+}
+.bubble.assistant {
+    border-radius:20px 20px 20px 0;
+    background-color: #383838;
+    color: #fff;
+    
+}
+.prompt-suggestion-button {
+    background-color: #e10600;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.prompt-suggestion-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 .loader {
     margin: 10px;
     width: 60px;
